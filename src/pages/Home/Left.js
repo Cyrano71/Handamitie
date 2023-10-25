@@ -7,6 +7,7 @@ import WeekendImage from "../../assets/png/weekend_240923.jpeg";
 import React from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { motion } from "framer-motion";
 
 const slideImages = [
   {
@@ -14,9 +15,11 @@ const slideImages = [
     caption: "Slide 0",
     id: "",
     resize: true,
-    jsx: (<>
-       <p>Weekend Handmitié à Massabielle à Saint Prix dans le 95</p>
-    </>),
+    jsx: (
+      <>
+        <p>Weekend Handmitié à Massabielle à Saint Prix dans le 95</p>
+      </>
+    ),
   },
   {
     image: MarieLaure,
@@ -35,7 +38,7 @@ const slideImages = [
         <p>Le soleil c'est Dieu</p>
         <p>L'arbre c'est le père Ganiteau</p>
         <p>Les nuages sont les autres prêtres de la paroisse</p>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Marie-Laure
         </p>
       </>
@@ -47,7 +50,7 @@ const slideImages = [
     id: "chantal",
     jsx: (
       <>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Chantal, Agnès, Jean-François, Babeth, Florence
         </p>
       </>
@@ -71,7 +74,7 @@ const slideImages = [
           fois, parfois des ateliers concrets comme réaliser du pain. Revoir les
           anciens lors de la journée des familles.
         </p>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           François
         </p>
       </>
@@ -87,7 +90,7 @@ const slideImages = [
           Hand Amitié, j'aime la prière et la messe. J'aime les jeux. J'aime
           aussi quand on chante des paraboles.
         </p>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Tristan
         </p>
       </>
@@ -108,7 +111,7 @@ const slideImages = [
           Depuis que je suis arrivé dans cette association, j'ai trouvé du
           bonheur. N'hésitez pas à venir, vous y trouverez de bonnes choses.
         </p>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Geoffroy
         </p>
       </>
@@ -120,7 +123,7 @@ const slideImages = [
     id: "maxime",
     jsx: (
       <>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Maxime
         </p>
       </>
@@ -132,7 +135,7 @@ const slideImages = [
     id: "anne",
     jsx: (
       <>
-        <p id="signature" class="blue">
+        <p id="signature" className="blue">
           Anne
         </p>
       </>
@@ -142,17 +145,36 @@ const slideImages = [
 
 export default function Left() {
   return (
-    <div class="left">
-      <h1 class="blue">Hand Amitié vue par les amis</h1>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 1,
+      }}
+      className="left"
+    >
+      <h1 className="blue">Hand Amitié vue par les amis</h1>
       <div className="slide-container">
         <Slide>
           {slideImages.map((slideImage, index) => (
-            <div class="mask">
+            <div key={index} className="mask">
               <div id="box">
-                <div key={index} class="global" id={slideImage.id}>
-                  <p class="img">
-                    {slideImage.resize && <img src={slideImage.image} alt="" style={{height: "100%", width: "100%", objectFit: "contain"}}/>}
-                    {!slideImage.resize && <img src={slideImage.image} alt=""/>}
+                <div className="global" id={slideImage.id}>
+                  <p className="img">
+                    {slideImage.resize && (
+                      <img
+                        src={slideImage.image}
+                        alt=""
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          objectFit: "contain",
+                        }}
+                      />
+                    )}
+                    {!slideImage.resize && (
+                      <img src={slideImage.image} alt="" />
+                    )}
                   </p>
                   {slideImage.jsx}
                 </div>
@@ -161,6 +183,6 @@ export default function Left() {
           ))}
         </Slide>
       </div>
-    </div>
+    </motion.div>
   );
 }

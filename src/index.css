@@ -1,280 +1,312 @@
-body{
-	font-family : Verdana,"Trebuchet MS", Arial;  
-	width : 100%;
-	margin : 0px;
-	padding : 0px;
-	color : #52595f;
-	background : #cacaca url("assets/png/bg.png") repeat-x;
+body {
+  font-family: Verdana, "Trebuchet MS", Arial;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  color: #52595f;
+  background: #cacaca url("assets/png/bg.png") repeat-x;
 }
-div.center{
-	width : 100%;
-	margin : 0px auto;
-	padding : 0px;
+div.center {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0px;
 
-	width : 850px;
+  width: 850px;
 }
-#bordure{
-	width : 100%;
-	margin : 0px;
-	padding : 0px;
+#bordure {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 
-	background : url("assets/png/bordure.png") repeat-y;
+  background: url("assets/png/bordure.png") repeat-y;
 }
-#footer{
-	margin : 15px 0px 0px 0px;
-	padding : 0px;
-	width : 100%;
-	height:92px;
-	background : url("assets/png/bottom.png") no-repeat;
+#footer {
+  margin: 15px 0px 0px 0px;
+  padding: 0px;
+  width: 100%;
+  height: 92px;
+  background: url("assets/png/bottom.png") no-repeat;
 }
-h1,h2,h3, ul, li, p{
-	margin : 0px;
-	padding : 0px;
-	font-family :  Verdana,"Trebuchet MS", Arial;  
-	font-weight : normal;
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, "Trebuchet MS", Arial;
+  font-weight: normal;
 }
-a, a:link, a:visited, a:hover {
-	text-decoration: none;
-	color : #3f424a;
+a,
+a:link,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #3f424a;
 }
-#header{
-	width : 100%;
-	height : 158px;
-	background : white;
+#header {
+  width: 100%;
+  height: 158px;
+  background: white;
 }
-#header .right{
-	width : 174px;
-	float : right;
+#header .right {
+  width: 174px;
+  float: right;
 
-	margin-right : 0px;
+  margin-right: 0px;
 }
-#header .left{
-	
+#header .left {
 }
-#header .left h1{
-	font-size : 34px;
-	margin-left : 38px;
-	padding-top : 23px;
-	color : #3f424a;
+#header .left h1 {
+  font-size: 34px;
+  margin-left: 38px;
+  padding-top: 23px;
+  color: #3f424a;
 }
-#header .left h2{
-	font-size : 28px;
-	margin-left : 80px;
-	padding-top : 5px;
-	overflow: hidden;
+#header .left h2 {
+  font-size: 28px;
+  margin-left: 80px;
+  padding-top: 5px;
+  overflow: hidden;
+}
+#menu {
+  margin-left: 18px;
+  margin-top: -25px;
+  overflow: hidden;
+}
+#menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#menu li {
+  float: left;
+  margin-left: 25px;
+}
+#main {
+  margin-top: 12px;
+  width: 100%;
+  color: #3f424a;
+}
+#main p {
+  font-family: Verdana, "Trebuchet MS", Arial;
+  padding: 12px;
+  font-size: 15px;
+  background: white;
+}
+#main p#top {
+  margin-bottom: 18px;
+}
+#main .left h1 {
+  font-size: 20px;
+  padding: 12px;
+}
+#main .right h1 {
+  font-size: 15px;
+  padding: 12px;
+}
+#main .right {
+  float: right;
+  width: 215px;
+}
+#main .right .rightElement {
+  margin-bottom: 12px;
+  background: white;
+}
+#main .right ul {
+  margin: 0;
+  list-style: none;
+}
+#main .right ul li {
+  font-size: 12px;
+  padding: 0px 16px 10px 16px;
+}
 
+@keyframes slide-up-fade-in {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-#menu{
-	
-	margin-left : 18px;
-	margin-top : -25px;
-	overflow: hidden;
+
+#main .left {
+  margin-right: 16px;
+  width: 610px;
+  background: white;
 }
-#menu ul{
-	margin: 0 ; 
-    padding: 0 ; 
-    list-style: none; 
+
+#main .right h1#rejoindre {
+  font-size: 20px;
+  color: #3f424a;
+  padding-bottom: 0px;
 }
-#menu li{
-	float : left;
-	margin-left:25px;
+#main .left p.img {
+  text-align: center;
 }
-#main{
-	margin-top : 12px;
-	width : 100%;
-	color : #3f424a;
+.prevNext {
+  width: 610px;
+  position: relative;
 }
-#main p{
-	font-family :  Verdana,"Trebuchet MS", Arial;  
-	padding : 12px;
-	font-size : 15px;
-	background : white;
+.mask {
+  margin: 0px auto 0px auto;
+  width: 490px;
+  min-height: 620px;
+  position: relative;
+  overflow: hidden;
 }
-#main p#top{
-	margin-bottom:18px;
+#box {
+  position: absolute;
 }
-#main .left h1{
-	font-size : 20px;
-	padding : 12px;
-}
-#main .right h1{
-	font-size : 15px;
-	padding : 12px;
-}
-#main .right{
-	float : right;
-	width : 215px;
-}
-#main .right .rightElement{
-	margin-bottom : 12px;
-	background : white;
-}
-#main .right ul{
-	margin: 0 ; 
-    list-style: none; 
-}
-#main .right ul li{
-	font-size : 12px;
-    padding: 0px 16px 10px 16px ; 
-    
-}
-#main .left{
-	margin-right : 16px;
-	width : 610px;
-	background : white;
-	
-}
-#main .right h1#rejoindre{
-	font-size : 20px;
-	color : #3f424a;
-	padding-bottom:0px;
-}
-#main .left p.img{
-	text-align:center;
-	
-}
-.prevNext{
-	width : 610px;
-	position : relative;
-}
-.mask{
-	margin : 0px auto 0px auto;
-	width : 490px;
-	min-height : 620px;
-	position : relative;
-	overflow:hidden;
-}
-#box{
-	position : absolute;
-}
-.global{
-	width : 490px;
-	min-height : 620px;
-	float : left;
+.global {
+  width: 490px;
+  min-height: 620px;
+  float: left;
 }
 ul#laure {
-	margin :0;
-	padding:0 50px;
+  margin: 0;
+  padding: 0 50px;
 }
-ul#laure li{
-	margin : 0px;
-	padding : 0px 4px 12px 4px;
+ul#laure li {
+  margin: 0px;
+  padding: 0px 4px 12px 4px;
 }
-#chantal{
-	margin-top : 20px;
+#chantal {
+  margin-top: 20px;
 }
-#francois{
-	margin-top : 40px;
+#francois {
+  margin-top: 40px;
 }
-#tristan{
-	margin-top : 20px;
+#tristan {
+  margin-top: 20px;
 }
-#maxime{
-	margin-top : 30px;
+#maxime {
+  margin-top: 30px;
 }
-#geoffroy{
-	margin-top : 60px;
+#geoffroy {
+  margin-top: 60px;
 }
-#anne{
-	margin-top : 20px;
+#anne {
+  margin-top: 20px;
 }
-#signature{
-	margin-top : 10px;
-	text-align:right;
+#signature {
+  margin-top: 10px;
+  text-align: right;
 }
-#next{
-	position : absolute;
-	top : 100px;
-	left : 562px;
-	height : 59px;
-	width: 37px;
+#next {
+  position: absolute;
+  top: 100px;
+  left: 562px;
+  height: 59px;
+  width: 37px;
 }
-#prev{
-	position : absolute;
-	top : 100px;
-	left : 12px;
-	height : 59px;
-	width: 37px;
+#prev {
+  position: absolute;
+  top: 100px;
+  left: 12px;
+  height: 59px;
+  width: 37px;
+}
 
+ul.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul.contact li {
+  padding: 0px 30px 10px 20px;
+}
+#main .left p {
+  padding: 0px 30px 12px 20px;
+}
+#main p.contact {
+  padding: 0px 30px 10px 20px;
+}
+#main p#hesite {
+  font-size: #3f424a;
+  padding: 0px 30px 20px 20px;
+  font-size: 18px;
+}
+.red,
+a.red {
+  color: #c22126;
+}
+.blue {
+  color: #2d54a5;
+}
+.orange {
+  color: #f77b0d;
+}
+.pink {
+  color: #cf1f54;
+}
+.imageLink a {
+  display: block;
+  text-indent: -5000px;
+}
+#logo {
+  width: 183px;
+  height: 172px;
+  background: url("assets/png/logo.png") no-repeat 0px 0px;
 }
 
-ul.contact{
-	margin: 0 ; 
-    padding: 0 ; 
-    list-style: none; 
+#accueil {
+  width: 72px;
+  height: 60px;
+  background: url("assets/png/accueil.png") left bottom no-repeat;
+  transition: transform 0.3ms;
 }
-ul.contact li{
-	padding : 0px 30px 10px 20px;
+#accueilSel,
+#menu li a:focus#accueil,
+#menu li a:hover#accueil,
+#menu li a:active#accueil {
+  width: 72px;
+  height: 60px;
+  background: url("assets/png/accueil.png") right bottom no-repeat;
+  transform: translateY(-5px);
 }
-#main .left p{
-	padding : 0px 30px 12px 20px;
+
+#nous_contacterSel,
+#menu li a:hover#nous_contacter,
+#menu li a:focus#nous_contacter,
+#menu li a:active#nous_contacter {
+  width: 136px;
+  height: 60px;
+  background: url("assets/png/nous_contacter.png") right bottom no-repeat;
+  transform: translateY(-5px);
 }
-#main p.contact{
-	padding : 0px 30px 10px 20px;
+#nous_contacter {
+  width: 136px;
+  height: 60px;
+  background: url("assets/png/nous_contacter.png") left bottom no-repeat;
+  transition: all 0.3ms;
 }
-#main p#hesite{
-	font-size:#3f424a;
-	padding : 0px 30px 20px 20px;
-	font-size : 18px;
+#qui_sommes_nousSel,
+#menu li a:hover#qui_sommes_nous,
+#menu li a:focus#qui_sommes_nous,
+#menu li a:active#qui_sommes_nous {
+  width: 172px;
+  height: 60px;
+  background: url("assets/png/qui_sommes_nous.png") right bottom no-repeat;
+  transform: translateY(-5px);
 }
-.red, a.red{
-	color : #c22126;
+#qui_sommes_nous {
+  width: 172px;
+  height: 60px;
+  background: url("assets/png/qui_sommes_nous.png") left bottom no-repeat;
+  transition: all 0.3ms;
 }
-.blue{
-	color : #2d54a5;
+#n_pic {
+  background: url("assets/png/prev.png") no-repeat 0px 0px;
+  height: 59px;
+  width: 37px;
 }
-.orange{
-	color : #f77b0d;
-}
-.pink{
-	color : #cf1f54;
-}
-.imageLink a{
-	display : block;
-	text-indent : -5000px;
-}
-#logo{
-	width : 183px;
-	height : 172px;
-	background : url("assets/png/logo.png") no-repeat 0px 0px;
-}
-#accueilSel, #menu li a:hover#accueil, #menu li a:focus#accueil, #menu li a:active#accueil{ 
-width : 72px;
-	height : 60px;
-   background : url("assets/png/accueil.png") right bottom no-repeat ;
- }
-#accueil{
-	width : 72px;
-	height : 60px;
-	background : url("assets/png/accueil.png") left bottom no-repeat ;
-}
-#nous_contacterSel, #menu li a:hover#nous_contacter, #menu li a:focus#nous_contacter, #menu li a:active#nous_contacter{ 
-	width : 136px;
-	height : 60px;
-   background : url("assets/png/nous_contacter.png") right bottom no-repeat ;
- }
-#nous_contacter{
-	width : 136px;
-	height : 60px;
-	background : url("assets/png/nous_contacter.png") left bottom no-repeat ;
-}
-#qui_sommes_nousSel, #menu li a:hover#qui_sommes_nous, #menu li a:focus#qui_sommes_nous, #menu li a:active#qui_sommes_nous{ 
-	width : 172px;
-	height : 60px;
-   background : url("assets/png/qui_sommes_nous.png") right bottom no-repeat ;
- }
-#qui_sommes_nous{
-	width : 172px;
-	height : 60px;
-	background : url("assets/png/qui_sommes_nous.png") left bottom no-repeat ;
-}
-#n_pic{
-	background : url("assets/png/prev.png") no-repeat 0px 0px;
-	height : 59px;
-	width: 37px;
-}
-#p_pic{
-	background : url("assets/png/next.png") no-repeat 0px 0px;
-	height : 59px;
-	width: 37px;
+#p_pic {
+  background: url("assets/png/next.png") no-repeat 0px 0px;
+  height: 59px;
+  width: 37px;
 }

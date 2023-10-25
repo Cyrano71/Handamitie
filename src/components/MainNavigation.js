@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function MainNavigation() {
   return (
@@ -6,12 +7,20 @@ function MainNavigation() {
       <div id="menu">
         <nav>
           <ul>
-            <li class="imageLink">
-              <NavLink to="/" title="accueil" id="accueilSel" end>
+            <motion.li
+              whileHover={{ scale: [1, 1.05, 1.1]}}
+              transition={{ type: "spring", stiffness: 250 }}
+              className="imageLink"
+            >
+              <NavLink to="/" title="accueil" id="accueil" end>
                 Accueil
               </NavLink>
-            </li>
-            <li class="imageLink">
+            </motion.li>
+            <motion.li
+              whileHover={{ scale: 1.1}}
+              transition={{ type: "spring", stiffness: 250 }}
+              className="imageLink"
+            >
               <NavLink
                 to="qui_sommes_nous"
                 title="Qui sommes-nous ?"
@@ -19,8 +28,12 @@ function MainNavigation() {
               >
                 Hand Amitie
               </NavLink>
-            </li>
-            <li class="imageLink">
+            </motion.li>
+            <motion.li
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 250 }}
+              className="imageLink"
+            >
               <NavLink
                 to="nous_contacter"
                 title="Nous contacter"
@@ -28,8 +41,8 @@ function MainNavigation() {
               >
                 Nous contacter
               </NavLink>
-            </li>
-            <li class="imageLink">
+            </motion.li>
+            <li className="imageLink">
               <NavLink to="jmj" title="JMJ" id="jmj">
                 JMJ
               </NavLink>

@@ -6,7 +6,7 @@ function RootLayout() {
   return (
     <>
       <div id="bordure">
-        <div class="center">
+        <div className="center">
           <Header />
           <MainNavigation />
           <main>
