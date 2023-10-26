@@ -4,6 +4,18 @@ import "react-slideshow-image/dist/styles.css";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
+const convertToJsx = (slide) => {
+  return (
+    <>
+    {slide.jsx.p.map((item) => <p>{item}</p>)}
+    <p id="signature" className="blue">
+      {slide.id}
+    </p>
+    </>
+
+  );
+};
+
 export default function Left() {
   const slideImages = useSelector((state) => state.slides);
   return (
@@ -38,7 +50,7 @@ export default function Left() {
                       <img src={slideImage.image} alt="" />
                     )}
                   </p>
-                  {slideImage.jsx}
+                  {convertToJsx(slideImage)}
                 </div>
               </div>
             </div>

@@ -33,140 +33,94 @@ const handamitieSlice = createSlice({
           caption: "Slide 0",
           id: "",
           resize: true,
-          jsx: (
-            <>
-              <p>Weekend Handmitié à Massabielle à Saint Prix dans le 95</p>
-            </>
-          ),
+          jsx: {
+            p: ["Weekend Handmitié à Massabielle à Saint Prix dans le 95"],
+          },
         },
         {
           image: MarieLaure,
           caption: "Slide 1",
-          id: "",
-          jsx: (
-            <>
-              <p>On y vient pour :</p>
-              <ul id="laurre">
-                <p>Rencontrer d'autres personnes</p>
-                <p>Réfléchir sur une lecture, une parabole</p>
-                <p>Faire une activité par rapport à ce qu'on a lu avant</p>
-                <p>Et surtout pour prier ensemble</p>
-              </ul>
-              <p>Les fleurs sont les amis et les animateurs.</p>
-              <p>Le soleil c'est Dieu</p>
-              <p>L'arbre c'est le père Ganiteau</p>
-              <p>Les nuages sont les autres prêtres de la paroisse</p>
-              <p id="signature" className="blue">
-                Marie-Laure
-              </p>
-            </>
-          ),
+          id: "Marie-Laure",
+          jsx: {
+            p: [
+              "On y vient pour :",
+              "Rencontrer d'autres personnes",
+              "Réfléchir sur une lecture, une parabole",
+              "Faire une activité par rapport à ce qu'on a lu avant",
+              "Et surtout pour prier ensemble",
+              "Les fleurs sont les amis et les animateurs.",
+              "Le soleil c'est Dieu",
+              "L'arbre c'est le père Ganiteau",
+              "Les nuages sont les autres prêtres de la paroisse",
+            ],
+          },
         },
         {
           image: Handamitie,
           caption: "Slide 2",
-          id: "chantal",
-          jsx: (
-            <>
-              <p id="signature" className="blue">
-                Chantal, Agnès, Jean-François, Babeth, Florence
-              </p>
-            </>
-          ),
+          id: "Chantal, Agnès, Jean-François, Babeth, Florence",
+          jsx: { p: [] },
         },
         {
           image: "",
           caption: "Slide 3",
-          id: "francois",
-          jsx: (
-            <>
-              <p>
-                Rencontres entre amis catholiques à la paroisse de l'Immaculée
-                Conception dans le 12ème avec l'aide de jeunes animateurs et des
-                aperçus spirituels donnés par un prêtre.
-              </p>
-              <p>Des sorties, vivre des temps forts pendant un week-end.</p>
-              <p>
-                Fondée à la suite des Journées Mondiales de la Jeunesse de 2000.
-              </p>
-              <p>
-                La joie de recevoir une invitation indiquant le thême de la
-                prochaine fois, parfois des ateliers concrets comme réaliser du
-                pain. Revoir les anciens lors de la journée des familles.
-              </p>
-              <p id="signature" className="blue">
-                François
-              </p>
-            </>
-          ),
+          id: "François",
+          jsx: {
+            p: [
+              "Rencontres entre amis catholiques à la paroisse de l'Immaculée \
+          Conception dans le 12ème avec l'aide de jeunes animateurs et des \
+          aperçus spirituels donnés par un prêtre.",
+              "Des sorties, vivre des temps forts pendant un week-end.",
+              "Fondée à la suite des Journées Mondiales de la Jeunesse de 2000.",
+              " La joie de recevoir une invitation indiquant le thême de la \
+          prochaine fois, parfois des ateliers concrets comme réaliser du \
+          pain. Revoir les anciens lors de la journée des familles.",
+            ],
+          },
         },
         {
           image: Tristan,
           caption: "Slide 4",
-          id: "tristan",
-          jsx: (
-            <>
-              <p>
-                Hand Amitié, j'aime la prière et la messe. J'aime les jeux.
-                J'aime aussi quand on chante des paraboles.
-              </p>
-              <p id="signature" className="blue">
-                Tristan
-              </p>
-            </>
-          ),
+          id: "Tristan",
+          jsx: {
+            p: [
+              "Hand Amitié, j'aime la prière et la messe. J'aime les jeux.\
+          J'aime aussi quand on chante des paraboles.",
+            ],
+          },
         },
         {
           image: "",
           caption: "Slide 5",
-          id: "geoffroy",
-          jsx: (
-            <>
-              <p>
-                Une association accueillante où il fait bon vivre. Un groupe
-                très uni. On fait des activités diverses et variées dans la joie
-                et la bonne humeur !
-              </p>
-              <p>
-                Depuis que je suis arrivé dans cette association, j'ai trouvé du
-                bonheur. N'hésitez pas à venir, vous y trouverez de bonnes
-                choses.
-              </p>
-              <p id="signature" className="blue">
-                Geoffroy
-              </p>
-            </>
-          ),
+          id: "Geoffroy",
+          jsx: {
+            p: [
+              " Une association accueillante où il fait bon vivre. Un groupe \
+          très uni. On fait des activités diverses et variées dans la joie \
+          et la bonne humeur !",
+              " Depuis que je suis arrivé dans cette association, j'ai trouvé du \
+        bonheur. N'hésitez pas à venir, vous y trouverez de bonnes \
+        choses.",
+            ],
+          },
         },
         {
           image: Maxime,
           caption: "Slide 6",
-          id: "maxime",
-          jsx: (
-            <>
-              <p id="signature" className="blue">
-                Maxime
-              </p>
-            </>
-          ),
+          id: "Maxime",
+          jsx: { p: [] },
         },
         {
           image: Anne,
           caption: "Slide 7",
-          id: "anne",
-          jsx: (
-            <>
-              <p id="signature" className="blue">
-                Anne
-              </p>
-            </>
-          ),
+          id: "Anne",
+          jsx: { p: [] },
         },
       ];
     },
   },
 });
 
-const store = configureStore({reducer : handamitieSlice.reducer})
+const store = configureStore({ reducer: handamitieSlice.reducer });
 export default store;
 export const handamitieActions = handamitieSlice.actions;
