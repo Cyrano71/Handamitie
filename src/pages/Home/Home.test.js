@@ -1,8 +1,7 @@
 import { RouterProvider, createMemoryRouter } from "react-router-dom";
 import * as React from "react";
-import { render, waitFor, screen } from "@testing-library/react";
+import { screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import userEvent from "@testing-library/user-event";
 import HomePage from "./Home";
 import { renderWithProviders } from "../../utils/utils-for-tests";
 
