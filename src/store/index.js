@@ -6,7 +6,7 @@ import Maxime from "../assets/png/maxime.png";
 import Anne from "../assets/png/anne1.png";
 import WeekendImage from "../assets/png/weekend_240923.jpeg";
 
-const handamitieSlice = createSlice({
+export const handamitieSlice = createSlice({
   name: "handamitie",
   initialState: {
     slides: [],
