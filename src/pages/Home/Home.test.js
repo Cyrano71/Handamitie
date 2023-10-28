@@ -19,6 +19,8 @@ describe("HomePage component", () => {
       initialEntries: ["/"],
     });
 
+    //https://redux.js.org/usage/writing-tests
+    //https://www.freecodecamp.org/news/how-to-write-unit-tests-in-react-redux/#-how-to-perform-testing-with-the-react-redux-toolkit
     renderWithProviders(<RouterProvider router={router} />);
 
     const outputElement = await screen.getByText("C'est par ici, venez.", {selector: 'a'})
