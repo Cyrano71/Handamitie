@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
-function MainNavigation() {
+export default function MainNavigation() {
   return (
     <>
       <div id="menu">
         <nav>
           <ul>
             <motion.li
-              whileHover={{ scale: [1, 1.05, 1.1]}}
+              whileHover={{ scale: [1, 1.05, 1.1] }}
               transition={{ type: "spring", stiffness: 250 }}
               className="imageLink"
             >
@@ -17,7 +17,7 @@ function MainNavigation() {
               </NavLink>
             </motion.li>
             <motion.li
-              whileHover={{ scale: 1.1}}
+              whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 250 }}
               className="imageLink"
             >
@@ -53,5 +53,3 @@ function MainNavigation() {
     </>
   );
 }
-
-export default MainNavigation;

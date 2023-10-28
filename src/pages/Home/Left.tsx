@@ -1,13 +1,14 @@
-import React from "react";
-import { Slide } from "react-slideshow-image";
+import { Slide as SlideShow } from "react-slideshow-image";
+import Slide from "../../models/Slide";
 import "react-slideshow-image/dist/styles.css";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../store/hook";
+import { selectSlides } from "../../store/slice";
 
-const convertToJsx = (slide) => {
+const convertToJsx = (slide: Slide) => {
   return (
     <>
-    {slide.jsx.p.map((item) => <p>{item}</p>)}
+    {slide.paragraphs.map((item) => <p>{item}</p>)}
     <p id="signature" className="blue">
       {slide.id}
     </p>
@@ -17,7 +18,7 @@ const convertToJsx = (slide) => {
 };
 
 export default function Left() {
-  const slideImages = useSelector((state) => state.slides);
+  const slideImages = useAppSelector(selectSlides);
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -29,7 +30,7 @@ export default function Left() {
     >
       <h1 className="blue">Hand Amitié vue par les amis</h1>
       <div className="slide-container">
-        <Slide>
+        <SlideShow>
           {slideImages.map((slideImage, index) => (
             <div key={index} className="mask">
               <div id="box">
@@ -55,7 +56,7 @@ export default function Left() {
               </div>
             </div>
           ))}
-        </Slide>
+        </SlideShow>
       </div>
     </motion.div>
   );

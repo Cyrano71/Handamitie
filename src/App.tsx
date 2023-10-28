@@ -5,8 +5,8 @@ import RootLayout from "./pages/Root";
 import QuiSommesNous from "./pages/QuiSommesNous/QuiSommesNous";
 import NousContacter from "./pages/NousContacter/NousContacter";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { handamitieActions } from "./store";
+import { storeActions } from "./store/slice";
+import { useAppDispatch } from "./store/hook";
 
 const router = createBrowserRouter([
   {
@@ -30,9 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   useEffect(() => {
-    dispatch(handamitieActions.initData());
+    dispatch(storeActions.initData());
   }, [dispatch]);
 
   return <RouterProvider router={router} />;

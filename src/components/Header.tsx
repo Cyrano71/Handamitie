@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-export default function Header() {
+export default function Header(){
   return (
     <div id="header">
       <div className="right">
@@ -16,4 +16,4 @@ export default function Header() {
       </div>
     </div>
   );
-}
+};

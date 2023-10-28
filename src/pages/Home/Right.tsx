@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../store/hook";
+import { selectCalendar } from "../../store/slice";
 
 export default function Right() {
   const container = {
@@ -16,7 +17,7 @@ export default function Right() {
     hidden: { opacity: 0 },
     show: { opacity: 1 },
   };
-  const calendar = useSelector((state) => state.calendar);
+  const calendar = useAppSelector(selectCalendar);
   return (
     <motion.div
       className="right"
