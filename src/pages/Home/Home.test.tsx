@@ -3,7 +3,6 @@ import { screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import HomePage from "./Home";
 import { renderWithProviders } from "../../utils/utils-for-tests";
-import Slide from "../../models/Slide";
 
 describe("HomePage component", () => {
   test("renders nous contacter page", async () => {

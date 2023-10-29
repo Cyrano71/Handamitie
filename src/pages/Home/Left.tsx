@@ -1,21 +1,9 @@
 import { Slide as SlideShow } from "react-slideshow-image";
-import Slide from "../../models/Slide";
 import "react-slideshow-image/dist/styles.css";
 import { motion } from "framer-motion";
 import { useAppSelector } from "../../store/hook";
 import { selectSlides } from "../../store/slice";
-
-const convertToJsx = (slide: Slide) => {
-  return (
-    <>
-    {slide.paragraphs.map((item) => <p>{item}</p>)}
-    <p id="signature" className="blue">
-      {slide.id}
-    </p>
-    </>
-
-  );
-};
+import SlideLayout from "../../components/SlideLayout";
 
 export default function Left() {
   const slideImages = useAppSelector(selectSlides);
@@ -32,29 +20,7 @@ export default function Left() {
       <div className="slide-container">
         <SlideShow>
           {slideImages.map((slideImage, index) => (
-            <div key={index} className="mask">
-              <div id="box">
-                <div className="global" id={slideImage.id}>
-                  <p className="img">
-                    {slideImage.resize && (
-                      <img
-                        src={slideImage.image}
-                        alt=""
-                        style={{
-                          height: "100%",
-                          width: "100%",
-                          objectFit: "contain",
-                        }}
-                      />
-                    )}
-                    {!slideImage.resize && (
-                      <img src={slideImage.image} alt="" />
-                    )}
-                  </p>
-                  {convertToJsx(slideImage)}
-                </div>
-              </div>
-            </div>
+            <SlideLayout item={slideImage} index={index} />
           ))}
         </SlideShow>
       </div>
